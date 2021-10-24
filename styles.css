@@ -1,0 +1,58 @@
+#mother {
+  height: 200px;
+  width: 300px;
+  border: solid 2px red;
+  background-color: red;
+}
+
+#mother-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#defence {
+  height: 200px;
+  width: 150px;
+  border: solid 2px blue;
+  background-color: blue;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#defence-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#attack {
+  height: 200px;
+  width: 150px;
+  border: solid 2px yellow;
+  background-color: yellow;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#attack-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-btn {
+  height: 100px;
+  width: 100px;
+  border: solid green 2px;
+  color: antiquewhite;
+  background-color: green;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
