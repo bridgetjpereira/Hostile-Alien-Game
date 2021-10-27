@@ -5,24 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+
     <title>Hostile Aliens Game</title>
   </head>
   <body>
-    <div id="mother-flex-container">
-      <div id="mother">Mother Ship</div>
-    </div>
+    <div id="overlay-gameover">
+      <div id="text">
+        Game Over!
 
-    <div id="defence-flex-container">
-      <div id="defence">Defence Ship</div>
+        <div id="overlay_buttons">
+          <button onClick="window.location.reload();">Play again!</button>
+        </div>
+      </div>
     </div>
+    <section id="ships" class="visible">
+      <section id="Mother-ship" class="visible">
+        <div id="mothership"></div>
+      </section>
 
-    <div id="attack-flex-container">
-      <div id="attack">Attack Ship Remaining Points</div>
-    </div>
+      <section id="Defence-ship" class="visible">
+        <div id="defenceship"></div>
+      </section>
 
+      <section id="Attack-ship" class="visible">
+        <div id="attackship"></div>
+      </section>
+    </section>
     <div id="button-container">
-      <button class="game-btn">Shoot!</button>
+      <button id="game-btn">Shoot!</button>
     </div>
   </body>
 </html>
+<script src="script.js"></script>

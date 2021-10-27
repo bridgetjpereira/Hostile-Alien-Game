@@ -1,4 +1,4 @@
-#mother {
+#Mother-ship {
   height: 200px;
   width: 300px;
   border: solid 2px red;
@@ -11,12 +11,12 @@
   justify-content: center;
 }
 
-#defence {
+#Defence-ship {
   height: 200px;
   width: 150px;
   border: solid 2px blue;
   background-color: blue;
-  margin-top: 10px;
+  margin-top: 200px;
   margin-right: 10px;
 }
 
@@ -26,7 +26,7 @@
   justify-content: center;
 }
 
-#attack {
+#Attack-ship {
   height: 200px;
   width: 150px;
   border: solid 2px yellow;
@@ -41,13 +41,11 @@
   flex-direction: row;
   justify-content: center;
 }
-
-.game-btn {
-  height: 100px;
-  width: 100px;
-  border: solid green 2px;
-  color: antiquewhite;
-  background-color: green;
+#game-btn {
+  height: 200px;
+  width: 300px;
+  border: solid 2px red;
+  background-color: red;
 }
 
 #button-container {
@@ -55,4 +53,50 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 10px;
+}
+
+#overlay-gameover {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  align-items: center;
+  text-align: center;
+}
+
+#overlay_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  height: 100px;
+  width: 200px;
+  border: 2px solid rgb(136, 26, 26);
+  border-radius: 15px;
+  font: bold;
+  font-size: 30px;
+  background-color: rgb(136, 26, 26);
+  margin: 30px;
+  box-shadow: black;
 }
