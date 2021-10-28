@@ -16,6 +16,7 @@ class ship {
     this._points = points;
     this._type = type;
   }
+  
   //   //1. Make class of ship
   get name() {
     return this._name;
