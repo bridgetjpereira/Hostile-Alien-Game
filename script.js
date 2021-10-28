@@ -125,6 +125,7 @@ function shoot() {
     document.getElementById("overlay-gameover").style.display = "block";
     document.getElementById("ships").classList.add("hidden");
     document.getElementById("ships").classList.remove("visible");
+    ships.splice(randomKey, 15);
   }
 }
 

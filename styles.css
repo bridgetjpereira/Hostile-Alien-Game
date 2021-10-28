@@ -1,51 +1,79 @@
-#Mother-ship {
-  height: 200px;
-  width: 300px;
-  border: solid 2px red;
-  background-color: red;
+* {
+  box-sizing: border-box;
+  font-family: cursive;
 }
 
-#mother-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+body {
+  background-image: url("../Stars_svg.svg");
 }
 
-#Defence-ship {
-  height: 200px;
-  width: 150px;
-  border: solid 2px blue;
-  background-color: blue;
+.mothership {
+  height: 100px;
+  width: 200px;
+  border: solid 2px greenyellow;
+  background-color: greenyellow;
+  color: white;
+  text-align: justify;
+  border-radius: 15px;
   margin-top: 200px;
-  margin-right: 10px;
 }
 
-#defence-flex-container {
+.mothership-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-#Attack-ship {
-  height: 200px;
-  width: 150px;
-  border: solid 2px yellow;
-  background-color: yellow;
+.defenceship {
+  height: 100px;
+  width: 120px;
+  border: solid 2px purple;
+  background-color: purple;
+  margin-top: 50px;
+  margin-right: 10px;
+  border-radius: 15px;
+  color: white;
+  text-align: justify;
+}
+
+#defenceship {
+  display: flex;
+}
+
+.defenceship-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#attackship {
+  display: flex;
+}
+.attackship {
+  height: 100px;
+  width: 120px;
+  border: solid 2px grey;
+  background-color: grey;
   margin-top: 10px;
   margin-right: 10px;
   text-align: center;
+  border-radius: 15px;
+  color: white;
+  text-align: justify;
+  font-size: small;
 }
 
-#attack-flex-container {
+.attackship-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 #game-btn {
-  height: 200px;
-  width: 300px;
-  border: solid 2px red;
-  background-color: red;
+  height: 150px;
+  width: 200px;
+  border: solid 2px orange;
+  background-color: orange;
+  color: white;
 }
 
 #button-container {
@@ -100,3 +128,9 @@ button {
   margin: 30px;
   box-shadow: black;
 }
+
+/* #ships {
+  height: 200px;
+  width: 200px;
+  border: 2px solid yellow;
+} */
