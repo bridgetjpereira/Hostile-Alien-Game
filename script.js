@@ -133,3 +133,17 @@ function shoot() {
 const randomHit = document.getElementById("game-btn");
 console.log(randomHit);
 randomHit.addEventListener("click", shoot);
+
+
+// describe("Tests to determine whether or not a shape entered is a triangle", () => {
+//   describe("equilateral triangle", () => {
+//     test("all sides are equal", () => {
+//       const triangle = new Triangle(2, 2, 2);
+//       expect(triangle.isEquilateral).toBe(true);
+//     });
+
+//     test("no sides are equal", () => {
+//       const triangle = new Triangle(5, 4, 6);
+//       expect(triangle.isEquilateral).toBe(false);
+//     });
+//   });

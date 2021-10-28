@@ -1,19 +1,20 @@
 * {
   box-sizing: border-box;
-  font-family: cursive;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
-  background-image: url("../Stars_svg.svg");
+  background-image: url("../Hostile-Alien-Game/Stars_svg.svg");
 }
 
 .mothership {
   height: 100px;
   width: 200px;
   border: solid 2px greenyellow;
-  background-color: greenyellow;
+  background-color: cornflowerblue;
   color: white;
-  text-align: justify;
   border-radius: 15px;
   margin-top: 200px;
 }
@@ -26,14 +27,13 @@ body {
 
 .defenceship {
   height: 100px;
-  width: 120px;
-  border: solid 2px purple;
+  width: 180px;
+  border: solid 2px greenyellow;
   background-color: purple;
   margin-top: 50px;
   margin-right: 10px;
   border-radius: 15px;
   color: white;
-  text-align: justify;
 }
 
 #defenceship {
@@ -51,16 +51,14 @@ body {
 }
 .attackship {
   height: 100px;
-  width: 120px;
-  border: solid 2px grey;
+  width: 180px;
+  border: solid 2px greenyellow;
   background-color: grey;
   margin-top: 10px;
   margin-right: 10px;
   text-align: center;
   border-radius: 15px;
   color: white;
-  text-align: justify;
-  font-size: small;
 }
 
 .attackship-container {
@@ -71,7 +69,7 @@ body {
 #game-btn {
   height: 150px;
   width: 200px;
-  border: solid 2px orange;
+  border: solid 2px greenyellow;
   background-color: orange;
   color: white;
 }
@@ -92,20 +90,16 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
 }
 
 #text {
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 400px;
   top: 50%;
   left: 50%;
   font-size: 100px;
   color: white;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   align-items: center;
   text-align: center;
 }
@@ -120,13 +114,13 @@ body {
 button {
   height: 100px;
   width: 200px;
-  border: 2px solid rgb(136, 26, 26);
+  border: 2px solid orange;
   border-radius: 15px;
   font: bold;
-  font-size: 30px;
-  background-color: rgb(136, 26, 26);
+  background-color: orange;
   margin: 30px;
   box-shadow: black;
+  color: white;
 }
 
 /* #ships {
