@@ -1,15 +1,3 @@
-// //PSEUDO CODE HOSTILE ALIEN GAME
-// //Set out HTML and CSS. ONLY 3 Divs!x
-// //Make class of ship with properties= Ship name, total points x
-// //Make objects of ship class eg. Defence Ship 1...Attack Ship 2...Mother Shipx
-// // When you click on the 'Shoot!'button => calls function(or method) to randomly
-// //select (or shoot) defence ship/ attack ship/ or Mother Ship.
-// //Once ship has been selected, points deducted depending on ship type and
-// //remaining points counter updated (innerHTML).
-// //If remaining points= 0, then hide ship!
-// //If all ships are hidden => alert game over!
-// //Game over alert=> gives option to restart game.
-
 class ship {
   constructor(name, points, type) {
     this._name = name;
@@ -17,7 +5,6 @@ class ship {
     this._type = type;
   }
 
-  //   //1. Make class of ship
   get name() {
     return this._name;
   }
@@ -28,11 +15,7 @@ class ship {
     return this._type;
   }
 
-  //   //2. Method to create ship div in HTML
   createShip() {
-    //Single quotes mean literal string...
-    //Syntax to autocreate a string that is populated by properties of the object. This allows
-    //us to create infinite number of unique HTML object within limit of 150 lines of code.
     return (
       '<div id="' +
       this.name +
@@ -48,7 +31,7 @@ class ship {
     );
   }
 }
-// // //incremental loop
+
 let y = 1;
 let z = 1;
 
@@ -74,44 +57,32 @@ console.log(ships);
 function shoot() {
   //target random member of array
   let randomKey = Math.floor(Math.random() * ships.length);
-
-  // removeItemOnce = (ships, randomKey) => {
-  //   let index = ships.indexOf(ships[randomKey]);
-  //   if (index > -1) {
-  //     ships.splice(index, 1);
-  //   }
-  //   return ships;
-  // };
-
-  //if target.event
-  //.if mothership= 0 => hide all 'ships' and display gameover
-
   if (ships[randomKey].type === "mothership") {
     if (ships[randomKey]._points > 9) {
       ships[randomKey]._points = ships[randomKey].points - 9;
-      console.log("New Points = " + ships[randomKey].points);
+      // console.log("New Points = " + ships[randomKey].points);
       document.getElementById("Mothership1points").innerHTML =
         ships[randomKey].points;
     } else {
-      ships[randomKey]._points = 0;
+      ships[randomKey]._points = 0 || ships.length === 0;
       document.getElementById("Mothership1points").innerHTML =
         ships[randomKey].points;
-      document.getElementById("#ships").classList.add(".ships-hidden");
-      document.getElementById("#ships").classList.remove(".ships");
+      document.getElementById("ships").classList.add("ships-hidden");
+      document.getElementById("ships").classList.remove("ships");
+      document.getElementById("game-btn").classList.add("game-btn-hidden"); ///only works with this!
+      document.getElementById("game-btn").classList.remove("game-btn-orange");
+      document.getElementById("overlay-gameover").style.display = "block";
     }
   } else if (ships[randomKey].type === "defenceship") {
     if (ships[randomKey]._points > 10) {
       ships[randomKey]._points = ships[randomKey].points - 10;
-      console.log("New Points = " + ships[randomKey].points);
+      // console.log("New Points = " + ships[randomKey].points);
       document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
-      // removeItemOnce();
     } else {
       ships[randomKey]._points = 0;
       document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
-      // document.getElementById(ships[randomKey].style.visibility) = 'hidden';
-      // removeItemOnce();
 
       document
         .getElementById(ships[randomKey].name)
@@ -124,7 +95,7 @@ function shoot() {
   } else {
     if (ships[randomKey]._points > 12) {
       ships[randomKey]._points = ships[randomKey].points - 12;
-      console.log("New Points = " + ships[randomKey].points);
+      // console.log("New Points = " + ships[randomKey].points);
       document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
     } else {
@@ -140,18 +111,45 @@ function shoot() {
       ships.splice(randomKey, 1);
     }
   }
-
-  if (ships.length === 0 || ships[0].points === 0) {
-    document.getElementById("ships").classList.add("ships-hidden"); ///only works with this!
-    document.getElementById("ships").classList.remove("ships");
-    document
-      .getElementById("button-container")
-      .classList.add("game-btn-hidden"); ///only works with this!
-    document.getElementById("button-container").classList.remove("game-btn");
-    document.getElementById("overlay-gameover").style.display = "block";
-  }
 }
 
 const randomHit = document.getElementById("game-btn");
 console.log(randomHit);
 randomHit.addEventListener("click", shoot);
+
+// if (ships.length === 0 || ships[0].points === 0) {
+//   document.getElementById("ships").classList.add("ships-hidden"); ///only works with this!
+//   document.getElementById("ships").classList.remove("ships");
+//   document
+//     .getElementById("button-container")
+//     .classList.add("game-btn-hidden"); ///only works with this!
+//   document.getElementById("button-container").classList.remove("game-btn");
+//   document.getElementById("overlay-gameover").style.display = "block";
+// }
+
+// removeItemOnce = (ships, randomKey) => {
+//   let index = ships.indexOf(ships[randomKey]);
+//   if (index > -1) {
+//     ships.splice(index, 1);
+//   }
+//   return ships;
+// };
+
+//if target.event
+//.if mothership= 0 => hide all 'ships' and display gameover
+
+// //PSEUDO CODE HOSTILE ALIEN GAME
+// //Set out HTML and CSS. ONLY 3 Divs!x
+// //Make class of ship with properties= Ship name, total points x
+// //Make objects of ship class eg. Defence Ship 1...Attack Ship 2...Mother Shipx
+// // When you click on the 'Shoot!'button => calls function(or method) to randomly
+// //select (or shoot) defence ship/ attack ship/ or Mother Ship.
+// //Once ship has been selected, points deducted depending on ship type and
+// //remaining points counter updated (innerHTML).
+// //If remaining points= 0, then hide ship!
+// //If all ships are hidden => alert game over!
+// //Game over alert=> gives option to restart game.
+
+//Single quotes mean literal string...
+//Syntax to autocreate a string that is populated by properties of the object. This allows
+//us to create infinite number of unique HTML object within limit of 150 lines of code.
