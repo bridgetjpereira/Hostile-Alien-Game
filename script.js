@@ -16,7 +16,7 @@ class ship {
     this._points = points;
     this._type = type;
   }
-  
+
   //   //1. Make class of ship
   get name() {
     return this._name;
@@ -48,7 +48,6 @@ class ship {
     );
   }
 }
-
 // // //incremental loop
 let y = 1;
 let z = 1;
@@ -74,8 +73,17 @@ console.log(ships);
 
 function shoot() {
   //target random member of array
-  const randomKey = Math.floor(Math.random() * ships.length);
+  let randomKey = Math.floor(Math.random() * ships.length);
 
+  // removeItemOnce = (ships, randomKey) => {
+  //   let index = ships.indexOf(ships[randomKey]);
+  //   if (index > -1) {
+  //     ships.splice(index, 1);
+  //   }
+  //   return ships;
+  // };
+
+  //if target.event
   //.if mothership= 0 => hide all 'ships' and display gameover
 
   if (ships[randomKey].type === "mothership") {
@@ -88,9 +96,8 @@ function shoot() {
       ships[randomKey]._points = 0;
       document.getElementById("Mothership1points").innerHTML =
         ships[randomKey].points;
-      document.getElementById("ships").classList.add("hidden");
-      document.getElementById("ships").classList.remove("visible");
-      ships.splice(randomKey, 1); //Need to remove object from array ie. make ship disappear if = 0;
+      document.getElementById("#ships").classList.add(".ships-hidden");
+      document.getElementById("#ships").classList.remove(".ships");
     }
   } else if (ships[randomKey].type === "defenceship") {
     if (ships[randomKey]._points > 10) {
@@ -98,52 +105,53 @@ function shoot() {
       console.log("New Points = " + ships[randomKey].points);
       document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
+      // removeItemOnce();
     } else {
       ships[randomKey]._points = 0;
       document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
-      document.getElementById("ships").classList.add("hidden");
-      document.getElementById("ships").classList.remove("visible");
+      // document.getElementById(ships[randomKey].style.visibility) = 'hidden';
+      // removeItemOnce();
+
+      document
+        .getElementById(ships[randomKey].name)
+        .classList.remove("defenceship");
+      document
+        .getElementById(ships[randomKey].name)
+        .classList.add("defenceship-hidden");
       ships.splice(randomKey, 1);
     }
   } else {
     if (ships[randomKey]._points > 12) {
       ships[randomKey]._points = ships[randomKey].points - 12;
       console.log("New Points = " + ships[randomKey].points);
-      document.getElementById(ships[randomKey].name + "points").innerHTML = //Don't understand this bit! Where is this ID??
+      document.getElementById(ships[randomKey].name + "points").innerHTML =
         ships[randomKey].points;
     } else {
       ships[randomKey]._points = 0;
       document.getElementById(ships[randomKey].name + "points").innerHTML =
-        ships[randomKey].points;
-      document.getElementById("ships").classList.add("hidden");
-      document.getElementById("ships").classList.remove("visible");
+        ships[randomKey]._points;
+      document
+        .getElementById(ships[randomKey].name)
+        .classList.add("attackship-hidden");
+      document
+        .getElementById(ships[randomKey].name)
+        .classList.remove("attackship");
       ships.splice(randomKey, 1);
     }
   }
 
   if (ships.length === 0 || ships[0].points === 0) {
+    document.getElementById("ships").classList.add("ships-hidden"); ///only works with this!
+    document.getElementById("ships").classList.remove("ships");
+    document
+      .getElementById("button-container")
+      .classList.add("game-btn-hidden"); ///only works with this!
+    document.getElementById("button-container").classList.remove("game-btn");
     document.getElementById("overlay-gameover").style.display = "block";
-    document.getElementById("ships").classList.add("hidden");
-    document.getElementById("ships").classList.remove("visible");
-    ships.splice(randomKey, 15);
   }
 }
 
 const randomHit = document.getElementById("game-btn");
 console.log(randomHit);
 randomHit.addEventListener("click", shoot);
-
-
-// describe("Tests to determine whether or not a shape entered is a triangle", () => {
-//   describe("equilateral triangle", () => {
-//     test("all sides are equal", () => {
-//       const triangle = new Triangle(2, 2, 2);
-//       expect(triangle.isEquilateral).toBe(true);
-//     });
-
-//     test("no sides are equal", () => {
-//       const triangle = new Triangle(5, 4, 6);
-//       expect(triangle.isEquilateral).toBe(false);
-//     });
-//   });
