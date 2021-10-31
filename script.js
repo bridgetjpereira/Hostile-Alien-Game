@@ -69,8 +69,8 @@ function shoot() {
         ships[randomKey].points;
       document.getElementById("ships").classList.add("ships-hidden");
       document.getElementById("ships").classList.remove("ships");
-      document.getElementById("game-btn").classList.add("game-btn-hidden"); ///only works with this!
-      document.getElementById("game-btn").classList.remove("game-btn-orange");
+      document.getElementById("game-btn").classList.add("game-btn-orange-hidden"); ///only works with this!
+      document.getElementById("game-btn").classList.remove("game-btn-orange"); ///NOT WORKING!!
       document.getElementById("overlay-gameover").style.display = "block";
     }
   } else if (ships[randomKey].type === "defenceship") {

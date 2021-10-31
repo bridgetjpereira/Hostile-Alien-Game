@@ -19,8 +19,6 @@ body {
 #game-btn,
 .game-btn-orange,
 button {
-  display: block;
-  visibility: visible;
   height: 100px;
   width: 200px;
   border: solid 2px greenyellow;
@@ -30,7 +28,7 @@ button {
   margin-right: 10px;
 }
 
-#game-btn,
+.button-container > #game-btn,
 .game-btn-orange,
 button {
   background-color: orange;
@@ -39,7 +37,7 @@ button {
 .mothership-hidden,
 .defenceship-hidden,
 .attackship-hidden,
-.game-btn-hidden,
+.game-btn-orange-hidden,
 .ships-hidden {
   display: none;
   visibility: hidden;
@@ -48,8 +46,7 @@ button {
 .mothership-container,
 .defenceship-container,
 .attackship-container,
-.button-container,
-#overlay_buttons {
+.button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -69,6 +66,7 @@ button {
 .defenceship {
   background-color: purple;
 }
+
 #defenceship,
 #attackship {
   display: flex;

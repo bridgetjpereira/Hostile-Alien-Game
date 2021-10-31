@@ -25,7 +25,7 @@ for (let i = 0; i < 1; i++) {
 // }
 // console.log(ships);
 
-/class to determine type of triangle
+//class to determine type of triangle
 
 export class Triangle {
   constructor(...sides) {
@@ -43,14 +43,15 @@ export class Triangle {
 
   get isEquilateral() {
     //get isMothership()
-    if (!this.isValid) { //if this isn't isValid => return false
+    if (!this.isValid) {
+      //if this isn't isValid => return false
       return false;
       //return false;
     }
     //const [t1, t2, t3] = this.type;
     const [s1, s2, s3] = this.sides;
     return s1 === s2 && s2 === s3 && s1 === s3;
-    return
+    return;
   }
 
   get isIsoceles() {
@@ -68,22 +69,6 @@ export class Triangle {
     return !this.isIsoceles;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // export const getName = (name,age) =>{
 //     return `${name}, ${age} years old.`
@@ -154,7 +139,6 @@ for (let i = 0; i < 1; i++) {
 //   }
 // }
 // console.log(ships);
-
 
 // # 1. Use '.toContain' when you want to check that an item is in an array.
 // # 2 '.toContain' can also check whether a string is a substring of another string.
