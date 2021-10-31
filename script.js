@@ -1,3 +1,11 @@
+// const refreshButton = document.querySelector("#play-button");
+
+// const refreshPage = () => {
+//   location.reload();
+// };
+
+// play - button.addEventListener("click", refreshPage);
+
 class ship {
   constructor(name, points, type) {
     this._name = name;
@@ -69,10 +77,13 @@ function shoot() {
         ships[randomKey].points;
       document.getElementById("ships").classList.add("ships-hidden");
       document.getElementById("ships").classList.remove("ships");
-      document.getElementById("game-btn").classList.add("game-btn-orange-hidden"); ///only works with this!
+      document
+        .getElementById("game-btn")
+        .classList.add("game-btn-orange-hidden"); ///only works with this!
       document.getElementById("game-btn").classList.remove("game-btn-orange"); ///NOT WORKING!!
       document.getElementById("overlay-gameover").style.display = "block";
-    }
+      document.getElementById("button-id").style.display="none";
+      }
   } else if (ships[randomKey].type === "defenceship") {
     if (ships[randomKey]._points > 10) {
       ships[randomKey]._points = ships[randomKey].points - 10;
@@ -116,6 +127,11 @@ function shoot() {
 const randomHit = document.getElementById("game-btn");
 console.log(randomHit);
 randomHit.addEventListener("click", shoot);
+
+// function reloadPage() {
+//   console.log("Reload Page to play again!");
+//   window.location.reload(true);
+// }
 
 // if (ships.length === 0 || ships[0].points === 0) {
 //   document.getElementById("ships").classList.add("ships-hidden"); ///only works with this!

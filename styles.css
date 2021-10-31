@@ -28,9 +28,8 @@ button {
   margin-right: 10px;
 }
 
-.button-container > #game-btn,
-.game-btn-orange,
-button {
+/* .button-container > #game-btn, */
+.game-btn-orange {
   background-color: orange;
   border: 2px solid orange;
 }
@@ -85,6 +84,13 @@ button {
   right: 0;
   bottom: 0;
   /* background-color: rgba(0, 0, 0, 0.7); Black background with opacity */
+}
+
+#play-button {
+  height: 100px;
+  width: 200px;
+  background-color: orange;
+  color: white;
 }
 
 #text {
