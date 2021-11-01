@@ -11,7 +11,6 @@ body {
 
 .mothership {
   background-color: cornflowerblue;
-  margin-top: 200px;
 }
 .mothership,
 .attackship,
@@ -27,9 +26,8 @@ button {
   margin-top: 50px;
   margin-right: 10px;
 }
-
-/* .button-container > #game-btn, */
-.game-btn-orange {
+.game-btn-orange,
+#play-button {
   background-color: orange;
   border: 2px solid orange;
 }
@@ -54,12 +52,11 @@ button {
 
 .button-container {
   position: fixed;
-  right: 0;
+  top: 0;
   left: 0;
   bottom: 0;
+  right: 0;
   top: 15em;
-  /* width: 8em; */
-  /* margin-top: -2.5em; */
 }
 
 .defenceship {
@@ -81,25 +78,15 @@ button {
   height: 100%; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  /* background-color: rgba(0, 0, 0, 0.7); Black background with opacity */
-}
-
-#play-button {
-  height: 100px;
-  width: 200px;
-  background-color: orange;
-  color: white;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #text {
-  /* position: absolute; */
   margin-top: 400px;
   top: 50%;
   left: 50%;
   font-size: 100px;
   color: white;
-  align-items: center;
-  text-align: center;
 }

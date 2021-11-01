@@ -1,11 +1,3 @@
-// const refreshButton = document.querySelector("#play-button");
-
-// const refreshPage = () => {
-//   location.reload();
-// };
-
-// play - button.addEventListener("click", refreshPage);
-
 class ship {
   constructor(name, points, type) {
     this._name = name;
@@ -42,7 +34,6 @@ class ship {
 
 let y = 1;
 let z = 1;
-
 let ships = [];
 
 for (let i = 0; i < 14; i++) {
@@ -60,7 +51,6 @@ for (let i = 0; i < 14; i++) {
     z++;
   }
 }
-console.log(ships);
 
 function shoot() {
   //target random member of array
@@ -79,11 +69,11 @@ function shoot() {
       document.getElementById("ships").classList.remove("ships");
       document
         .getElementById("game-btn")
-        .classList.add("game-btn-orange-hidden"); ///only works with this!
-      document.getElementById("game-btn").classList.remove("game-btn-orange"); ///NOT WORKING!!
+        .classList.add("game-btn-orange-hidden");
+      document.getElementById("game-btn").classList.remove("game-btn-orange");
       document.getElementById("overlay-gameover").style.display = "block";
-      document.getElementById("button-id").style.display="none";
-      }
+      document.getElementById("button-id").style.display = "none";
+    }
   } else if (ships[randomKey].type === "defenceship") {
     if (ships[randomKey]._points > 10) {
       ships[randomKey]._points = ships[randomKey].points - 10;
@@ -127,32 +117,6 @@ function shoot() {
 const randomHit = document.getElementById("game-btn");
 console.log(randomHit);
 randomHit.addEventListener("click", shoot);
-
-// function reloadPage() {
-//   console.log("Reload Page to play again!");
-//   window.location.reload(true);
-// }
-
-// if (ships.length === 0 || ships[0].points === 0) {
-//   document.getElementById("ships").classList.add("ships-hidden"); ///only works with this!
-//   document.getElementById("ships").classList.remove("ships");
-//   document
-//     .getElementById("button-container")
-//     .classList.add("game-btn-hidden"); ///only works with this!
-//   document.getElementById("button-container").classList.remove("game-btn");
-//   document.getElementById("overlay-gameover").style.display = "block";
-// }
-
-// removeItemOnce = (ships, randomKey) => {
-//   let index = ships.indexOf(ships[randomKey]);
-//   if (index > -1) {
-//     ships.splice(index, 1);
-//   }
-//   return ships;
-// };
-
-//if target.event
-//.if mothership= 0 => hide all 'ships' and display gameover
 
 // //PSEUDO CODE HOSTILE ALIEN GAME
 // //Set out HTML and CSS. ONLY 3 Divs!x

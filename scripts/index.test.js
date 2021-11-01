@@ -1,69 +1,40 @@
-// import { getName } from "./index.js";
-// //import function from index.js file
-// //Assertion using it keyword
-// //First parameter is string that we expect function to return.
-// //Second call back function 
-// it("Should return the string 'Sam, 22 years old.'", () => {
-//   const output = getName("Sam", 22);
-//   expect(output).toBe("Sam, 22 years old.");
-// });
+import { Ship } from "./index.js";
+import { TestWatcher } from "@jest/core";
 
-
-// it ("Should return the name, followed by the age", () => {
-//     const output = getName ('Ollie' , 27);
-//     expect(output).toBe('Ollie, 27 years old.')
-// })
-
-
-// export class Ship {
-//   constructor(type) {
-//
-//         this._type = type;
-//   }
-
-//   get isValid() {
-//     const [mothership, defenceship, attackship] = this.type;
-       
-//     const sidesArePositive = s1 > 0 && s2 > 0 && s3 > 0;
-//     const validatesTriangleInequality =
-//       s1 + s2 >= s3 && s1 + s3 >= s2 && s3 + s2 >= s1;
-//     return sidesArePositive && validatesTriangleInequality;
-//   }
-
-//   get isMothership() {
-//     if (!this.isValid) {
-//       return false;
-//     }
-//     const [s1, s2, s3] = this.sides;
-//     return s1 === s2 && s2 === s3 && s1 === s3;
-//   }
-
-//   get isDefenceship() {
-//     if (!this.isValid) {
-//       return false;
-//     }
-//     const [s1, s2, s3] = this.sides;
-//     return s1 === s2 || s1 === s3 || s2 === s3;
-//   }
-
-//   get isAttackship() {
-//     if (!this.isValid) {
-//       return false;
-//     }
-//     return !this.isIsoceles;
-//   }
-// }
-
-
-describe("Tests to determine whether or not target object is mothership, defenceship or attackship", () => {
-  describe("mothership", () => {
-    test("counter is less than zero", () => {
-      const ship = new ship("Mothership1", 100, "mothership");
-      expect(ship.isMothership).toBe(true);
+describe("Tests to make sure ship object is created successfully", () => {
+  describe("Test to make sure name is a string", () => {
+    test("name is a string", () => {
+      const ship = new Ship("mothership1", 80, "mothership");
+      expect(typeof ship.name).toContain("string");
     });
 
-//     test("no sides are equal", () => {
-//       const triangle = new Triangle(5, 4, 6);
-//       expect(triangle.isEquilateral).toBe(false);
-//     });
+    test("points is a number", () => {
+      const ship = new Ship("mothership1", 80, "mothership");
+      expect(typeof ship.points).toContain("number");
+    });
+
+    test("type is a string", () => {
+      const ship = new Ship("mothership1", 80, "mothership");
+      expect(typeof ship.name).toContain("string");
+    });
+  });
+});
+
+// import {randomKey} from './index.js';
+// describe('randomKey', async assert => {
+//   const start = 0;
+//   const end = 14;
+//   const numbers = Array.from({ length: 14 }, () => randomKey(start, end));
+// assert({
+//     given: 'start, end',
+//     should: 'generate a random number greater than or equal to start',
+//     actual: numbers.every(n => n >= start),
+//     expected: true
 //   });
+// assert({
+//     given: 'start, end',
+//     should: 'generate a random number less than or equal to end',
+//     actual: numbers.every(n => n <= end),
+//     expected: true
+//   });
+// });
