@@ -1,58 +1,92 @@
-#mother {
-  height: 200px;
-  width: 300px;
-  border: solid 2px red;
-  background-color: red;
-}
-
-#mother-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#defence {
-  height: 200px;
-  width: 150px;
-  border: solid 2px blue;
-  background-color: blue;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-#defence-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#attack {
-  height: 200px;
-  width: 150px;
-  border: solid 2px yellow;
-  background-color: yellow;
-  margin-top: 10px;
-  margin-right: 10px;
+* {
+  box-sizing: border-box;
+  font-size: 20px;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
-#attack-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+body {
+  background-image: url("../Stars_svg.svg");
 }
 
-.game-btn {
+.mothership {
+  background-color: cornflowerblue;
+}
+.mothership,
+.attackship,
+.defenceship,
+#game-btn,
+.game-btn-orange,
+button {
   height: 100px;
-  width: 100px;
-  border: solid green 2px;
-  color: antiquewhite;
-  background-color: green;
+  width: 200px;
+  border: solid 2px greenyellow;
+  color: white;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+.game-btn-orange,
+#play-button {
+  background-color: orange;
+  border: 2px solid orange;
+}
+.mothership-hidden,
+.defenceship-hidden,
+.attackship-hidden,
+.game-btn-orange-hidden,
+.ships-hidden {
+  display: none;
+  visibility: hidden;
 }
 
-#button-container {
+.mothership-container,
+.defenceship-container,
+.attackship-container,
+.button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+}
+
+.button-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 15em;
+}
+
+.defenceship {
+  background-color: purple;
+}
+
+#defenceship,
+#attackship {
+  display: flex;
+}
+.attackship {
+  background-color: grey;
+}
+
+#overlay-gameover {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#text {
+  margin-top: 400px;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  color: white;
 }
