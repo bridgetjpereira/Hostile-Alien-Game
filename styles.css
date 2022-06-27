@@ -7,6 +7,7 @@
 
 body {
   background-image: url("../Stars_svg.svg");
+  position: relative;
 }
 
 .mothership {
@@ -51,12 +52,12 @@ button {
 }
 
 .button-container {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   bottom: 0;
   right: 0;
-  top: 15em;
+  transform: translateX(-50%);
 }
 
 .defenceship {
