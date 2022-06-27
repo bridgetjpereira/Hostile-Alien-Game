@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("../Stars_svg.svg");
+  background-image: url("./Stars_svg.svg");
   position: relative;
 }
 
